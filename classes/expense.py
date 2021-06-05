@@ -10,4 +10,13 @@ class Expense:
 
     @classmethod
     def objects(cls):
-        pass
+        expenses = []
+        my_path = os.path.abspath(os.path.dirname(__file__))
+        path = os.path.join(my_path, "../data/expenses.csv")
+
+        with open(path) as csvfile:
+            reader = csv.DictReader(csvfile)
+            for row in reader:
+                #print(dict(row))
+                expenses.append(Expense(**dict(row)))
+            return expenses

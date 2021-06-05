@@ -8,7 +8,7 @@ class Budget:
         self.expenses = Expense.objects()
 
     def __str__(self):
-        str = f"{self.name}'s budget has {self.total_income()} income and $$$ monthly expenses"
+        str = f"{self.name}'s budget has {self.total_income()} income and {self.total_expenses()} monthly expenses"
         return (str)
 
     def total_income(self):
@@ -16,3 +16,9 @@ class Budget:
         for income in self.incomes:
             total_income += float(income.amount)
         return total_income
+
+    def total_expenses(self):
+        total_expenses = 0
+        for expense in self.expenses:
+            total_expenses += float(expense.amount)
+        return total_expenses

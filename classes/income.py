@@ -10,11 +10,11 @@ class Income:
     def objects(cls):
         incomes = []
         my_path = os.path.abspath(os.path.dirname(__file__))
-        path = os.path.join(my_path, "../data/income.csv")
+        path = os.path.join(my_path, "../data/incomes.csv")
 
         with open(path) as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
-                print(dict(row))
+                #print(dict(row))
                 incomes.append(Income(**dict(row)))
             return incomes
