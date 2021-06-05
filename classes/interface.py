@@ -8,7 +8,7 @@ class BudgetInterface:
 
     def run(self):
         print(
-            f"Welcome, {self.name}, to the nightmarish hell scape that is your personal finances!")
+            f"Welcome, {self.name}, to the nightmarish hellscape that is your personal finances!")
         print("_" * 60)
         while True:
             mode = input(self.main_menu())
@@ -27,10 +27,11 @@ class BudgetInterface:
 
 
     def main_menu(self):
-        return("\nWhat would you like to do?\nOptions: \n1. Budget Menu\n 2. Income Menu\n 3. Expense Menu\n 4. Quick Budget\n5. Quit\n")
+
+        return("\nWhat would you like to do?\nOptions:\n1. Budget Menu\n2. Income Menu\n3. Expense Menu\n4. Quick Budget\n5. Quit\n")
     
     def budget_menu(self):
-        pass
+        return
 
     def income_menu(self):
         pass

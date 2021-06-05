@@ -1,4 +1,1 @@
-name,amount
-Salary,2500
-VA Payment,1200
-Education Stipend,900
+name,amount,category,date

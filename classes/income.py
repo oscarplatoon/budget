@@ -2,9 +2,11 @@ import csv
 import os.path
 
 class Income:
-    def __init__(self, name, amount):
+    def __init__(self, name, amount, category = "income", date = "1/1/2021"):
         self.name = name
         self.amount = amount
+        self.category = category
+        self.date = date
 
     @classmethod
     def objects(cls):
