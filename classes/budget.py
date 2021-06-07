@@ -14,7 +14,7 @@ class Budget:
         return (str)
 
     def add_income(self, income_data):
-        self.incomes.append(Income(**income_data))
+        self.incomes.append(Income(**dict(income_data)))
         self.save(self.incomes)
 
     def total_income(self):
