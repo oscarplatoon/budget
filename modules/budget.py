@@ -1,6 +1,6 @@
 class Budget:
     def __init__(self, income):
-        self.set_monthly_income(inocme)
+        self.set_monthly_income(income)
         self.transactions = []
         
     def set_monthly_income(self, income):
@@ -37,6 +37,6 @@ class Budget:
         total_costs = self.get_monthly_costs(month)
         category_costs = self.get_month_costs_per_category(month)
         category_pct_cost = {}
-        for cat in category costs:
+        for cat in category_costs:
             category_pct_cost[cat] = 100.0 * (category_costs[cat] / total_costs)
             

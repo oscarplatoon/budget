@@ -1,6 +1,7 @@
 from modules.budget import Budget
 from modules.month import Month
 from modules.transaction import Transaction
+from modules.category import Category
 
 class Interface:
     
@@ -18,6 +19,11 @@ class Interface:
                     print(f"You spent ${costs} in {Month.get_month_name(month.name)}.")
                 except:
                     print("ERROR ADDING TRANSACTION!!")
+            elif option == 2:
+                month = int(input("Enter Month: "))
+                category_pct_costs = self.budget.get_month_costs_per_category(month)
+                for cat in category_pct_costs:
+                    print(f"{Category(cat).name}: %{category_pct_costs[cat]} of all expenses in the month of {Month(month).name}.")
             elif option == 3:
                 amount = int(input("Enter amount spent: "))
                 category = int(input("Enter category: "))
