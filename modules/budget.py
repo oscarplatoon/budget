@@ -46,6 +46,9 @@ class Budget:
 
         # calculate percentages for each category spending
         for cat in category_costs:
-            category_pct_costs[cat] = round(100.0 * (category_costs[cat] / total_costs), 2)
+            if total_costs > 0:
+                category_pct_costs[cat] = round(100.0 * (category_costs[cat] / total_costs), 2)
+            else:
+                category_pct_costs == 0
 
         return category_pct_costs
