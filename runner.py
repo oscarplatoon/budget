@@ -1,1 +1,6 @@
-# After you write all your classes, use this file to call them all together and run your program
+from modules.interface import Interface
+
+budget_interface = Interface()
+budget_interface.run()
+
+
