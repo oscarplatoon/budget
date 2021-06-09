@@ -1,5 +1,6 @@
 from enum import Enum
 
+# month enum
 class Month(Enum):
     JAN = 0
     FEB = 1
@@ -13,8 +14,3 @@ class Month(Enum):
     OCT = 9
     NOV = 10
     DEC = 11
-    
-    @staticmethod
-    def get_month_name(month):
-        if month == Month.MAY:
-            return "May"
